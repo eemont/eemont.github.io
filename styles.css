@@ -65,17 +65,22 @@ header {
 }
 
 .home {
-  background: url("home-bg.jpg") no-repeat center center/cover;
+  /*background: url("home-bg.jpg") no-repeat center center/cover;*/
+  /*background-color: #333;*/
   color: #252525;
   text-align: center;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.about,
+.about {
+  height: 25vh;
+  text-align: center;
+}
+
 .services,
 .contact {
   height: 50vh;
@@ -137,6 +142,18 @@ header {
   max-width: 100%; /* Ensure the image doesn't exceed the container's width */
   height: auto; /* Maintain the aspect ratio */
 }
+
+/*div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}*/
 
 footer {
   text-align: center;

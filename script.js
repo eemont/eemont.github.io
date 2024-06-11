@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Message sent! Thank you for contacting us.');
+        alert('Message sent! Thank you for reaching out.');
         form.reset();
     });
 });

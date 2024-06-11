@@ -3,26 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Website</title>
+    <title>Emmanuel Montoya's Website</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">Emmanuel Montoya</div>
+        <div class="logo">
+          <a href="#home">
+            <img
+              width="68"
+              height="68"
+              src="/Users/emont/Desktop/eemont.github.io/assets/images/EMlogoWHITE.png"
+              alt="portrait"
+            />
+          </a>
+        </div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <!-- <li><a href="#projects">Services</a></li> -->
+          <li><a href="#services">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="home" class="section home">
+    <!-- <head>
+      <style>
+        img {
+          border-radius: 50%;
+        }
+      </style>
+    </head> -->
+
+    <div id="home" class="section home">
+      <div id="portrait" class="section portrait">
+        <img
+          width="512"
+          height="682.66"
+          src="/Users/emont/Desktop/eemont.github.io/assets/images/PORTRAIT1.JPG"
+          alt="portrait"
+        />
+      </div>
       <h2>Hey, I'm Emmanuel!</h2>
-      <p>Computer Science + Graphic Design</p>
-    </section>
+      <h3>Computer Science + Graphic Design</h3>
+    </div>
 
     <section id="about" class="section about">
       <h2>About Me</h2>
@@ -33,23 +58,30 @@
       </p>
     </section>
 
-    <!--
     <section id="services" class="section services">
-      <h2>Our Services</h2>
+      <h2>My Projects</h2>
       <div class="service-item">
-        <h3>Web Development</h3>
-        <p>We create responsive and functional websites.</p>
+        <h3>Data Processing Project</h3>
+        <p>
+          Project is a data processing application that reads data from an input
+          file, processes the data, removes excess space and comments from the
+          code, tokenizes the remaining code, and prints the output in a tabular
+          form.
+        </p>
       </div>
       <div class="service-item">
-        <h3>Web Design</h3>
-        <p>We design modern and aesthetically pleasing interfaces.</p>
+        <h3>FlexFit</h3>
+        <p>
+          FlexFit is an application that allows users to keep track of their BMI
+          and BMR while also providing users the ability to discover workout
+          exercises needed to gain their desired physique.
+        </p>
       </div>
-      <div class="service-item">
+      <!-- <div class="service-item">
         <h3>SEO Optimization</h3>
         <p>We optimize your website to rank higher in search engines.</p>
-      </div>
+      </div> -->
     </section>
-    -->
 
     <section id="contact" class="section contact">
       <h2>Contact Me</h2>
@@ -112,6 +144,34 @@
         </a>
       </div>
     </div>
+
+    <!-- <h2>Responsive Polaroid Images / Cards</h2>
+
+    <div class="polaroid">
+      <img
+        width="512"
+        height="682.66"
+        src="/Users/emont/Desktop/eemont.github.io/assets/images/PORTRAIT1.JPG"
+        alt="5 Terre"
+        style="width: 100%"
+      />
+      <div class="container">
+        <p>Cinque Terre</p>
+      </div>
+    </div>
+
+    <div class="polaroid">
+      <img
+        width="512"
+        height="682.66"
+        src="/Users/emont/Desktop/eemont.github.io/assets/images/PORTRAIT1.JPG"
+        alt="Norther Lights"
+        style="width: 100%"
+      />
+      <div class="container">
+        <p>Northern Lights</p>
+      </div>
+    </div> -->
 
     <footer>
       <p>&copy; 2024 Emmanuel Montoya. All rights reserved.</p>
