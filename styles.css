@@ -96,14 +96,14 @@ header {
   text-align: center;
 }
 
-.services {
+/*.services {
   height: 50vh;
   text-align: center;
 }
 
 .service-item {
   margin: 2rem 0;
-}
+}*/
 
 /*.contact {
   height: 50vh;
@@ -176,7 +176,7 @@ div.container {
 
 footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   background: #333;
   color: #fff;
 }
