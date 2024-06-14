@@ -69,7 +69,7 @@ header {
   /*background-color: #333;*/
   color: #252525;
   text-align: center;
-  height: 25vh;
+  /*height: vh;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +80,7 @@ header {
   width: 300px; /* Desired width */
   height: 400px; /* Desired height */
   overflow: hidden; /* Ensure overflow is hidden */
-  /* margin-bottom: 25px; */
+  margin-bottom: 25px;
 }
 
 .portrait img {
@@ -176,7 +176,7 @@ div.container {
 
 footer {
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   background: #333;
   color: #fff;
 }
