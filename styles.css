@@ -92,7 +92,7 @@ header {
 }
 
 .about {
-  height: 25vh;
+  height: 50vh;
   text-align: center;
 }
 
@@ -139,12 +139,65 @@ header {
   background: #007bb5;
 }*/
 
+div.polaroid {
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.polaroid:hover {
+  border: 1px solid #777;
+}
+
+div.polaroid img {
+  width: 100%;
+  height: auto;
+}
+
+div.container {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.project {
+  padding: 0 6px;
+  float: left;
+  width: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .project {
+    width: 49.99999%;
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .project {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* End of PROJECTS SECTION */
+
+/* Start of CONNECT SECTION */
+
 .connect {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*height: 100vh; /* Adjust height as needed */
+  height: 50vh; /* Adjust height as needed */
 }
 
 .connect h2 {
