@@ -246,6 +246,20 @@ div.container {
   padding: 10px 20px;
 }*/
 
+#cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh; /* Adjust to fit the viewport */
+  width: 100%;
+  padding-top: 260px;
+  padding-bottom: 150px;
+}
+
+.resume iframe {
+  border: none; /* Remove the default border */
+}
+
 footer {
   text-align: center;
   padding: 1rem 0;
