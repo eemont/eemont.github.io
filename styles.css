@@ -246,13 +246,43 @@ div.container {
   padding: 10px 20px;
 }*/
 
+#cvTitle {
+  height: 20vh;
+  text-align: center;
+  padding-top: 200px;
+}
+
+#cvButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; /* Adjust to fit the viewport */
+  padding-top: 20px;
+}
+
+#downloadButton {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#downloadButton:hover {
+  background-color: #0056b3;
+}
+
 #cv {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120vh; /* Adjust to fit the viewport */
   width: 100%;
-  padding-top: 260px;
   padding-bottom: 150px;
 }
 
