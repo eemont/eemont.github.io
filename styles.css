@@ -257,7 +257,7 @@ div.container {
   justify-content: center;
   align-items: center;
   height: 20vh; /* Adjust to fit the viewport */
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 #downloadButton {
@@ -281,9 +281,10 @@ div.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh; /* Adjust to fit the viewport */
+  height: 100vh; /* Adjust to fit the viewport */
   width: 100%;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .resume iframe {
