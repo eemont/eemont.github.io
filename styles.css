@@ -282,6 +282,7 @@ div.container {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Adjust to fit the viewport */
+  overflow: hidden; /* Hide any overflow */
   padding: 20px;
 }
 
