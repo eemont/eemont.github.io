@@ -285,18 +285,11 @@ div.container {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 20px;
+  padding: 20px;
 }
 
 .resume iframe {
   border: none; /* Remove the default border */
-}
-
-@media (max-width: 768px) {
-  .resume iframe {
-    width: 90%; /* Adjust the width to fit smaller screens */
-    /*height: 702px; /* Adjust the height as needed */
-    height: 90%;
-  }
 }
 
 footer {
