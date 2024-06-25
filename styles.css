@@ -291,6 +291,14 @@ div.container {
   border: none; /* Remove the default border */
 }
 
+@media (max-width: 768px) {
+  .resume iframe {
+    width: 90%; /* Adjust the width to fit smaller screens */
+    /*height: 702px; /* Adjust the height as needed */
+    height: 90%;
+  }
+}
+
 footer {
   text-align: center;
   padding: 1rem 0;
