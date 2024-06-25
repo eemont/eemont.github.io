@@ -292,6 +292,18 @@ div.container {
   border: none; /* Remove the default border */
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .resume iframe {
+    width: 90%; /* Adjust the width to fit smaller screens */
+    height: 90vh; /* Adjust the height to fit smaller screens */
+    transform: scale(0.75); /* Scale down the content */
+    transform-origin: top center; /* Center the scaling origin */
+    margin: 0 auto; /* Center the iframe */
+    display: block; /* Ensure the iframe is a block element */
+  }
+}
+
 footer {
   text-align: center;
   padding: 1rem 0;
