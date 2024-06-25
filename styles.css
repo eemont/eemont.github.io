@@ -286,7 +286,16 @@ div.container {
   padding: 20px;
 }
 
-.resume iframe {
+/*.resume iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 816px; /* Maximum width
+  max-height: 1056px; /* Maximum height
+  border: none; /* Remove the default border
+  object-fit: contain; /* Scale the content while maintaining aspect ratio
+}*/
+
+.resume embed {
   width: 100%;
   height: 100%;
   max-width: 816px; /* Maximum width */
