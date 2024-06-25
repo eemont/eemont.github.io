@@ -289,15 +289,12 @@ div.container {
 }
 
 .resume iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 600px; /* Maximum width */
+  max-height: 780px; /* Maximum height */
   border: none; /* Remove the default border */
-}
-
-@media only screen and (max-width: 700px) {
-  .resume {
-    height: 50%;
-    width: 100%; /* When 500px, project size increases to 100%  */
-    margin: 6px 0;
-  }
+  object-fit: contain; /* Scale the content while maintaining aspect ratio */
 }
 
 footer {
