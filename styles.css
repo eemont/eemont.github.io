@@ -194,7 +194,14 @@ div.container {
 
 @media only screen and (max-width: 500px) {
   .project {
-    height: 100%; /* When 500px, project size increases to 100%  */
+    width: 80%; /* When 500px, project size increases to 100%  */
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .project {
+    width: 100%; /* When 500px, project size increases to 100%  */
     margin: 6px 0;
   }
 }
