@@ -313,12 +313,12 @@ div.container {
 }*/
 
 /* Styles for mobile view */
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   #cv iframe {
     width: 100%;
     height: auto;
   }
-}
+}*/
 
 footer {
   text-align: center;
