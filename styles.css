@@ -51,7 +51,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #00aced;
+  color: rgb(0, 172, 237);
 }
 
 .section {
@@ -176,11 +176,10 @@ div.container {
 }
 
 .project {
-  padding: 6px 6px;
+  padding: 20px 20px;
   float: left;
-  margin-left: 15px;
-  /*width: 24.99999%;*/
-  width: 32%; /* Default size */
+  margin-left: 90px;
+  width: 25%; /* Default size */
 }
 
 @media only screen and (max-width: 700px) {
