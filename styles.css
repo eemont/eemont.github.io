@@ -151,6 +151,10 @@ div.projectTitle {
   margin: 10px 0;
 }
 
+div.projectGallery {
+  margin-left: 20%;
+}
+
 div.polaroid {
   border: 1px solid #ccc;
   /*padding: 15px; makes it look more like a polaroid */
@@ -176,9 +180,10 @@ div.container {
 }
 
 .project {
-  padding: 20px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
   float: left;
-  margin-left: 90px;
   width: 25%; /* Default size */
 }
 
