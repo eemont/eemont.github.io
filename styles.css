@@ -5,10 +5,27 @@
   font-family: "Arial", sans-serif;
 }
 
+@font-face {
+  font-family: "MADE Tommy Bold";
+  src: url("assets/fonts/made_tommy/MADE TOMMY Bold_PERSONAL USE.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
+  font-family: "MADE Tommy Bold", sans-serif;
+
   line-height: 1.6;
   color: #ffffff;
   background: #1d1d1d;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "MADE Tommy Bold", sans-serif;
 }
 
 header {
@@ -44,6 +61,8 @@ header {
 }
 
 .nav-links a {
+  font-family: "MADE Tommy Bold", sans-serif;
+
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
@@ -69,6 +88,7 @@ header {
 .home {
   /*background: url("home-bg.jpg") no-repeat center center/cover;*/
   /*background-color: #333;*/
+
   color: #ffffff;
   text-align: center;
   height: 100vh;
