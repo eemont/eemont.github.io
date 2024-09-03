@@ -139,11 +139,6 @@ header {
   text-align: center;
 }
 
-#frameworks img {
-  padding: 10px;
-  box-sizing: content-box;
-}
-
 .frameworks {
   text-align: center;
 }
@@ -154,12 +149,17 @@ header {
   text-align: center;
 }
 
-#engines img {
-  padding: 10px;
-  box-sizing: content-box;
+.engines {
+  text-align: center;
 }
 
-.engines {
+.softwareTitle {
+  padding-top: 150px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.software {
   text-align: center;
 }
 
