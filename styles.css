@@ -124,6 +124,7 @@ header {
 }
 
 .languages {
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -134,6 +135,7 @@ header {
 }
 
 .frameworks {
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -144,6 +146,7 @@ header {
 }
 
 .engines {
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -154,6 +157,7 @@ header {
 }
 
 .software {
+  padding-top: 10px;
   text-align: center;
 }
 
