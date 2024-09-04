@@ -15,7 +15,6 @@
 
 body {
   font-family: "MADE Tommy Bold", sans-serif;
-
   line-height: 1.6;
   color: #ffffff;
   background: #1d1d1d;
@@ -122,11 +121,6 @@ header {
   padding-top: 150px;
   padding-bottom: 25px;
   text-align: center;
-}
-
-#languages img {
-  padding: 10px;
-  box-sizing: content-box;
 }
 
 .languages {
