@@ -98,7 +98,7 @@ header {
 }
 
 .portrait {
-  width: 300px; /* Desired width */
+  width: 280px; /* Desired width */
   height: 400px; /* Desired height */
   overflow: hidden; /* Ensure overflow is hidden */
 }
@@ -108,14 +108,18 @@ header {
   height: 100%;
   object-fit: cover; /* Crop the image */
   /*border-radius: 8px;*/ /* Creates round corners */
-  border-radius: 50%; /* Modifies image to be a citcle */
+  border-radius: 50%; /* Modifies image to be a circle */
 }
+
+/* --------------------------------------------------- */
 
 .about {
   padding-top: 150px;
   height: 50vh;
   text-align: center;
 }
+
+/* --------------------------------------------------- */
 
 .languageTitle {
   padding-top: 150px;
@@ -128,6 +132,8 @@ header {
   text-align: center;
 }
 
+/* --------------------------------------------------- */
+
 .frameworksTitle {
   padding-top: 150px;
   padding-bottom: 25px;
@@ -138,6 +144,8 @@ header {
   padding-top: 10px;
   text-align: center;
 }
+
+/* --------------------------------------------------- */
 
 .enginesTitle {
   padding-top: 150px;
@@ -150,6 +158,8 @@ header {
   text-align: center;
 }
 
+/* --------------------------------------------------- */
+
 .softwareTitle {
   padding-top: 150px;
   padding-bottom: 25px;
@@ -161,9 +171,7 @@ header {
   text-align: center;
 }
 
-/* End of ABOUT SECTION */
-
-/* Start of PROJECTS SECTION */
+/* --------------------------------------------------- */
 
 div.projectTitle {
   text-align: center;
