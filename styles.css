@@ -276,6 +276,7 @@ div.container {
   display: flex;
   justify-content: center;
   gap: 1rem; /* Adjust gap between images as needed */
+  text-align: left;
 }
 
 .image-container img {
@@ -332,7 +333,7 @@ div.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust to fit the viewport */
+  height: 135vh; /* Adjust to fit the viewport */
   overflow: hidden; /* Hide any overflow */
   padding: 20px;
 }
