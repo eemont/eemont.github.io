@@ -235,6 +235,11 @@ div.container {
     width: 50%; /* When 700px, project size increases to 75%  */
     margin: 6px 0;
   }
+
+  div.projectGallery {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -242,12 +247,21 @@ div.container {
     width: 80%; /* When 500px, project size increases to 100%  */
     margin: 6px 0;
   }
+
+  div.projectGallery {
+    width: 80%;
+    margin-left: 20%;
+  }
 }
 
 @media only screen and (max-width: 300px) {
   .project {
     width: 100%; /* When 500px, project size increases to 100%  */
     margin: 6px 0;
+  }
+  div.projectGallery {
+    width: 80%;
+    margin-left: 20%;
   }
 }
 
