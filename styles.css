@@ -18,6 +18,8 @@ body {
   line-height: 1.6;
   color: #ffffff;
   background: #1d1d1d;
+
+  text-align: center;
 }
 
 h1,
@@ -379,6 +381,80 @@ div.container {
     height: auto;
   }
 }*/
+
+div.gfx-ui {
+  padding-top: 200px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+div.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+div.gfx-photo:hover {
+  border: 1px solid #777;
+}
+
+.swiper-container {
+  width: 80%;
+  height: 50vh;
+  padding-top: 200px;
+  padding-bottom: 600px;
+  margin: auto;
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Center image fully visible */
+.swiper-slide-active img {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Left and right images slightly faded and slanted */
+.swiper-slide-prev img {
+  opacity: 0.5;
+  transform: scale(0.9) rotateY(15deg);
+  padding-left: 15%;
+}
+.swiper-slide-next img {
+  opacity: 0.5;
+  transform: scale(0.9) rotateY(15deg);
+  padding-right: 15%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  padding-top: 50px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+}
+
+.swiper-button-next {
+  padding-top: 35%;
+  padding-right: 35%;
+}
+.swiper-button-prev {
+  padding-top: 35%;
+  padding-left: 35%;
+}
 
 footer {
   text-align: center;
