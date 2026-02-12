@@ -8,7 +8,7 @@ export const projects = [
       live: "https://web-socket-communication.onrender.com/", // put your deployed link here
       code: "https://github.com/Renzo-Salosagcol/Web-Socket-Communication",
     },
-    image: "/public/projects/YapSessions_appicon.png", // put an image in public/projects/
+    image: "/projects/YapSessions_appicon.png", // put an image in public/projects/
   },
   {
     title: "Planify",
@@ -19,7 +19,7 @@ export const projects = [
       live: "",
       code: "https://github.com/eemont/Planify",
     },
-    image: "/public/projects/planify_appicon.png",
+    image: "/projects/planify_appicon.png",
   },
     {
     title: "FlexFit",
@@ -30,7 +30,7 @@ export const projects = [
       live: "",
       code: "https://github.com/jainharshul/FlexFit",
     },
-    image: "/public/projects/flexfit_appicon.png",
+    image: "/projects/flexfit_appicon.png",
   },
       {
     title: "Lexical Analyzer",
@@ -41,6 +41,6 @@ export const projects = [
       live: "",
       code: "https://github.com/eemont/cpsc323-project1",
     },
-    image: "/public/projects/LexicalAnalyzerPNG.png",
+    image: "/projects/LexicalAnalyzerPNG.png",
   },
 ];
