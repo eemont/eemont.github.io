@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Web Socklet Communication",
+    title: "Web Socket Communication",
     description:
       "A client-server WebSocket-based chat system that allows team members to communicate in real time.",
     tags: ["HTML", "CSS", "JavaScript", "NodeJS", "Express", "NeonDB", "Render"],
