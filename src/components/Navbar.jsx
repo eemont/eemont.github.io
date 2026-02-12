@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
         <a href="#top" className="flex items-center gap-6 font-semibold tracking-tight">
         <img
-            src="/EMlogoWHITE.png"
+            src="/projects/EMlogoWHITE.png"
             alt="Logo"
             className="h-8 w-8 rounded-md"
         />
