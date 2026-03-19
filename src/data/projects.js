@@ -1,14 +1,26 @@
 export const projects = [
+    {
+    title: "PC Build Generator",
+    description:
+      "PC Build Generator is a full-stack web application that helps users create and customize PC builds based on budget or component selection.",
+    tags: ["React", "Vite", "NodeJS", "Supabase", "Vercel", "PostgreSQL", "HTML", "CSS"
+            , "CI/CD",],
+    links: {
+      live: "https://pc-bg.vercel.app/",
+      code: "https://github.com/eemont/PC-Build-Generator",
+    },
+    image: "/projects/PCBG_LOGO.png",
+  },
   {
     title: "Web Socket Communication",
     description:
       "A client-server WebSocket-based chat system that allows team members to communicate in real time.",
-    tags: ["HTML", "CSS", "JavaScript", "NodeJS", "Express", "NeonDB", "Render"],
+    tags: ["HTML", "CSS", "JavaScript", "NodeJS", "Express", "NeonDB", "PostgreSQL", "Render"],
     links: {
-      live: "https://web-socket-communication.onrender.com/", // put your deployed link here
+      live: "https://web-socket-communication.onrender.com/",
       code: "https://github.com/Renzo-Salosagcol/Web-Socket-Communication",
     },
-    image: "/projects/YapSessions_appicon.png", // put an image in public/projects/
+    image: "/projects/YapSessions_appicon.png",
   },
   {
     title: "Planify",

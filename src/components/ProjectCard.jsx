@@ -28,26 +28,34 @@ export default function ProjectCard({ title, description, tags, links, image }) 
         </div>
 
         <div className="mt-5 flex gap-3 text-sm">
-          {links?.live ? (
+          {links?.live && (
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+              </span>
+
+              <a
+                href={links.live}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg bg-white text-black px-4 py-1.5 font-medium transition hover:bg-zinc-200"
+              >
+                Live
+              </a>
+            </div>
+          )}
+
+          {links?.code && (
             <a
-              className="text-white hover:underline"
-              href={links.live}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live
-            </a>
-          ) : null}
-          {links?.code ? (
-            <a
-              className="text-white hover:underline"
               href={links.code}
               target="_blank"
               rel="noreferrer"
+              className="rounded-lg border border-white/20 px-4 py-1.5 font-medium text-white transition hover:bg-white/10"
             >
               Code
             </a>
-          ) : null}
+          )}
         </div>
       </div>
     </article>
