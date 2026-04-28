@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { socials } from "../data/socials";
 
 export default function Hero() {
@@ -26,7 +27,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-5 max-w-2xl text-zinc-300">
-          I'm an upcoming Computer Science graduate who loves building modern
+          I’m an upcoming Computer Science graduate who loves building modern
           applications and bringing ideas to life with clean design and real
           backend functionality.
         </p>
@@ -50,8 +51,9 @@ export default function Hero() {
             href={socials.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="flex items-center gap-2 rounded-xl border border-[#0A66C2]/60 bg-[#0A66C2]/10 px-4 py-2 text-sm font-semibold text-[#5eaeff] transition-colors hover:border-[#0A66C2] hover:bg-[#0A66C2]/20"
           >
+            <FaLinkedin className="text-[#0A66C2] text-base" />
             LinkedIn
           </a>
 
@@ -59,8 +61,9 @@ export default function Hero() {
             href={socials.github}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold transition-colors hover:border-white/40 hover:bg-white/10"
           >
+            <FaGithub className="text-white text-base" />
             GitHub
           </a>
 
@@ -68,8 +71,9 @@ export default function Hero() {
             href={socials.discord}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="flex items-center gap-2 rounded-xl border border-[#5865F2]/60 bg-[#5865F2]/10 px-4 py-2 text-sm font-semibold text-[#a5b4fc] transition-colors hover:border-[#5865F2] hover:bg-[#5865F2]/20"
           >
+            <FaDiscord className="text-[#5865F2] text-base" />
             Discord
           </a>
         </div>
