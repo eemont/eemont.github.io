@@ -11,9 +11,9 @@ export default function Hero() {
       <div className="order-1 flex justify-center md:order-2 md:justify-end">
         <div className="h-72 w-72 overflow-hidden rounded-full border-2 border-white/10 sm:h-80 sm:w-80">
           <img
-            src="/PORTRAIT3.JPG"
+            src="/IMG_0428.JPG"
             alt="Emmanuel Montoya Aguilar"
-            className="h-full w-full object-cover scale-125 translate-y-5"
+            className="h-full w-full object-cover object-top"
           />
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function Hero() {
         {[
           { name: "C++",                url: "https://cplusplus.com/" },
           { name: "Python",             url: "https://www.python.org/" },
-          { name: "C",                  url: "https://en.wikipedia.org/wiki/C_(programming_language)" },
+          { name: "C",                  url: "https://www.c-language.org/" },
           { name: "C#",                 url: "https://dotnet.microsoft.com/en-us/languages/csharp" },
           { name: "HTML",               url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
           { name: "CSS",                url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
