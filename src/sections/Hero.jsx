@@ -26,7 +26,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-5 max-w-2xl text-zinc-300">
-          I'm an upcoming Computer Science graduate who loves building modern
+          I'm a Computer Science graduate who loves building modern
           applications and bringing ideas to life with clean design and real
           backend functionality.
         </p>
