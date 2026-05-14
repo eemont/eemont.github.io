@@ -45,12 +45,12 @@ export const projects = [
     image: "/projects/flexfit_appicon.png",
   },
       {
-    title: "Lexical Analyzer",
+    title: "LEXER",
     description:
       "Project is a data processing application that reads data from an input .txt file, processes the data, removes excess space and comments from the code, tokenizes the remaining code, and prints the output in a tabular format.",
     tags: ["C++"],
     links: {
-      live: "",
+      live: "https://eemont.github.io/cpsc323-project1/",
       code: "https://github.com/eemont/cpsc323-project1",
     },
     image: "/projects/LexicalAnalyzerPNG.png",

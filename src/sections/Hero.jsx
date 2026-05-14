@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { socials } from "../data/socials";
 
 export default function Hero() {
@@ -10,9 +11,9 @@ export default function Hero() {
       <div className="order-1 flex justify-center md:order-2 md:justify-end">
         <div className="h-72 w-72 overflow-hidden rounded-full border-2 border-white/10 sm:h-80 sm:w-80">
           <img
-            src="/PORTRAIT3.JPG"
+            src="/IMG_0428.JPG"
             alt="Emmanuel Montoya Aguilar"
-            className="h-full w-full object-cover scale-125 translate-y-5"
+            className="h-full w-full object-cover object-top"
           />
         </div>
       </div>
@@ -50,8 +51,9 @@ export default function Hero() {
             href={socials.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="flex items-center gap-2 rounded-xl border border-[#0A66C2]/60 bg-[#0A66C2]/10 px-4 py-2 text-sm font-semibold text-[#5eaeff] transition-colors hover:border-[#0A66C2] hover:bg-[#0A66C2]/20"
           >
+            <FaLinkedin className="text-[#0A66C2] text-base" />
             LinkedIn
           </a>
 
@@ -59,8 +61,9 @@ export default function Hero() {
             href={socials.github}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold transition-colors hover:border-white/40 hover:bg-white/10"
           >
+            <FaGithub className="text-white text-base" />
             GitHub
           </a>
 
@@ -68,8 +71,9 @@ export default function Hero() {
             href={socials.discord}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="flex items-center gap-2 rounded-xl border border-[#5865F2]/60 bg-[#5865F2]/10 px-4 py-2 text-sm font-semibold text-[#a5b4fc] transition-colors hover:border-[#5865F2] hover:bg-[#5865F2]/20"
           >
+            <FaDiscord className="text-[#5865F2] text-base" />
             Discord
           </a>
         </div>
@@ -77,46 +81,48 @@ export default function Hero() {
 
       {/* SKILLS TAGS (FULL WIDTH BELOW BOTH) */}
       <div className="order-3 md:col-span-2 mt-6 flex flex-wrap gap-2 text-xs text-zinc-400">
-
         {[
-          "C++",
-          "Python",
-          "C",
-          "C#",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Swift",
-          "Dart",
-          "SQL",
-          "PHP",
-          "JSON",
-          "Assembly",
-          "React",
-          "Vite",
-          "Tailwind",
-          "Supabase",
-          "Vercel",
-          "React Native",
-          "MongoDB",
-          "Render",
-          "Flutter",
-          "GitHub",
-          "GitHub Actions",
-          "Microsoft Office365",
-          "Adobe Suite",
-          "UE5",
-          "Unity",
-          "Figma",
-          "NodeJS",
-          "Express",
-        ].map((t) => (
-          <span
-            key={t}
-            className="rounded-full border border-white/10 px-3 py-1"
+          { name: "C++",                url: "https://cplusplus.com/" },
+          { name: "Python",             url: "https://www.python.org/" },
+          { name: "C",                  url: "https://www.c-language.org/" },
+          { name: "C#",                 url: "https://dotnet.microsoft.com/en-us/languages/csharp" },
+          { name: "HTML",               url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+          { name: "CSS",                url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+          { name: "JavaScript",         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+          { name: "Swift",              url: "https://www.swift.org/" },
+          { name: "Dart",               url: "https://dart.dev/" },
+          { name: "SQL",                url: "https://www.w3schools.com/sql/" },
+          { name: "PHP",                url: "https://www.php.net/" },
+          { name: "JSON",               url: "https://www.json.org/" },
+          { name: "Assembly",           url: "https://en.wikipedia.org/wiki/Assembly_language" },
+          { name: "React",              url: "https://react.dev/" },
+          { name: "Vite",               url: "https://vitejs.dev/" },
+          { name: "Tailwind",           url: "https://tailwindcss.com/" },
+          { name: "Supabase",           url: "https://supabase.com/" },
+          { name: "Vercel",             url: "https://vercel.com/" },
+          { name: "React Native",       url: "https://reactnative.dev/" },
+          { name: "MongoDB",            url: "https://www.mongodb.com/" },
+          { name: "Render",             url: "https://render.com/" },
+          { name: "Flutter",            url: "https://flutter.dev/" },
+          { name: "GitHub",             url: "https://github.com/" },
+          { name: "GitHub Actions",     url: "https://github.com/features/actions" },
+          { name: "Microsoft Office365",url: "https://www.microsoft.com/en-us/microsoft-365" },
+          { name: "Adobe Suite",        url: "https://www.adobe.com/creativecloud.html" },
+          { name: "UE5",                url: "https://www.unrealengine.com/" },
+          { name: "Unity",              url: "https://unity.com/" },
+          { name: "Figma",              url: "https://www.figma.com/" },
+          { name: "NodeJS",             url: "https://nodejs.org/" },
+          { name: "Express",            url: "https://expressjs.com/" },
+        ].map(({ name, url }) => (
+          <a
+            key={name}
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-white/10 px-3 py-1 transition-all duration-200 hover:border-white/30 hover:bg-white/10 hover:text-zinc-100 hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(255,255,255,0.06)]"
           >
-            {t}
-          </span>
+            {name}
+          </a>
         ))}
       </div>
     </section>
