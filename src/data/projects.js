@@ -11,17 +11,28 @@ export const projects = [
     },
     image: "/projects/PCBG_LOGO.png",
   },
-  {
-    title: "Web Socket Communication",
+    {
+    title: "LEXER",
     description:
-      "A client-server WebSocket-based chat system that allows team members to communicate in real time.",
-    tags: ["HTML", "CSS", "JavaScript", "NodeJS", "Express", "NeonDB", "PostgreSQL", "Render"],
+      "Project is a data processing application that reads data from an input .txt file, processes the data, removes excess space and comments from the code, tokenizes the remaining code, and prints the output in a tabular format.",
+    tags: ["C++"],
     links: {
-      live: "https://web-socket-communication.onrender.com/",
-      code: "https://github.com/Renzo-Salosagcol/Web-Socket-Communication",
+      live: "https://eemont.github.io/cpsc323-project1/",
+      code: "https://github.com/eemont/cpsc323-project1",
     },
-    image: "/projects/YapSessions_appicon.png",
+    image: "/projects/LexicalAnalyzerPNG.png",
   },
+  // {
+  //   title: "Web Socket Communication",
+  //   description:
+  //     "A client-server WebSocket-based chat system that allows team members to communicate in real time.",
+  //   tags: ["HTML", "CSS", "JavaScript", "NodeJS", "Express", "NeonDB", "PostgreSQL", "Render"],
+  //   links: {
+  //     live: "https://web-socket-communication.onrender.com/",
+  //     code: "https://github.com/Renzo-Salosagcol/Web-Socket-Communication",
+  //   },
+  //   image: "/projects/YapSessions_appicon.png",
+  // },
   {
     title: "Planify",
     description:
@@ -43,16 +54,5 @@ export const projects = [
       code: "https://github.com/jainharshul/FlexFit",
     },
     image: "/projects/flexfit_appicon.png",
-  },
-      {
-    title: "LEXER",
-    description:
-      "Project is a data processing application that reads data from an input .txt file, processes the data, removes excess space and comments from the code, tokenizes the remaining code, and prints the output in a tabular format.",
-    tags: ["C++"],
-    links: {
-      live: "https://eemont.github.io/cpsc323-project1/",
-      code: "https://github.com/eemont/cpsc323-project1",
-    },
-    image: "/projects/LexicalAnalyzerPNG.png",
   },
 ];
