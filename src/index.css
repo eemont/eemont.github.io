@@ -5,6 +5,11 @@
 @layer base {
   html, body {
     background-color: #09090b;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 64px;
   }
 }
 
