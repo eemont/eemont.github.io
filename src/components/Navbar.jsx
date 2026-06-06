@@ -26,6 +26,13 @@ export default function Navbar() {
 
           <a
             className="relative hover:text-white transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            href="#logos"
+          >
+            Logos
+          </a>
+
+          <a
+            className="relative hover:text-white transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             href="#contact"
           >
             Contact
