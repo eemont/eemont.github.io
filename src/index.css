@@ -16,6 +16,7 @@
   .animate-modal-in {
     animation: modal-in 0.25s ease-out forwards;
   }
+
 }
 
 @keyframes fade-in {
