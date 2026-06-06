@@ -1,29 +1,39 @@
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { socials } from "../data/socials";
+import FadeIn from "../components/FadeIn";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2"
+      className="relative mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2"
     >
-      {/* IMAGE (TOP ON MOBILE, RIGHT ON DESKTOP) */}
-      <div className="order-1 flex justify-center md:order-2 md:justify-end">
-        <div className="h-72 w-72 overflow-hidden rounded-full border-2 border-white/10 sm:h-80 sm:w-80">
-          <img
-            src="/IMG_0428.JPG"
-            alt="Emmanuel Montoya Aguilar"
-            className="h-full w-full object-cover object-top"
-          />
-        </div>
+      {/* Background glow blobs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-sky-500/10 blur-3xl" />
+        <div className="absolute top-20 right-1/4 h-64 w-64 rounded-full bg-violet-500/10 blur-3xl" />
       </div>
 
+      {/* IMAGE (TOP ON MOBILE, RIGHT ON DESKTOP) */}
+      <FadeIn className="order-1 flex justify-center md:order-2 md:justify-end" delay={150}>
+        <div className="relative">
+          <div className="absolute inset-0 scale-110 rounded-full bg-sky-500/15 blur-2xl" />
+          <div className="relative h-72 w-72 overflow-hidden rounded-full border-2 border-white/20 ring-2 ring-sky-500/20 sm:h-80 sm:w-80">
+            <img
+              src="/IMG_0428.JPG"
+              alt="Emmanuel Montoya Aguilar"
+              className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+      </FadeIn>
+
       {/* TEXT (BOTTOM ON MOBILE, LEFT ON DESKTOP) */}
-      <div className="order-2 md:order-1">
+      <FadeIn className="order-2 md:order-1">
         <p className="text-sm text-zinc-400">Software Developer</p>
 
-        <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-          Hi, I’m Emmanuel.
+        <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-sky-200 via-white to-violet-200 bg-clip-text text-transparent">
+          Hi, I'm Emmanuel.
         </h1>
 
         <p className="mt-5 max-w-2xl text-zinc-300">
@@ -35,14 +45,14 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="#projects"
-            className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-zinc-950 hover:opacity-90"
+            className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition-all duration-200 hover:opacity-90 hover:shadow-lg hover:shadow-white/10 hover:-translate-y-0.5"
           >
             View projects
           </a>
 
           <a
             href="https://docs.google.com/document/d/18BPKCWXhiGvv7LqWIu_jk13Zie6PvaGT0QFumCX5Jbc/export?format=pdf"
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold hover:border-white/20 hover:bg-white/5"
+            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold transition-all duration-200 hover:border-white/20 hover:bg-white/5 hover:-translate-y-0.5"
           >
             Download resume
           </a>
@@ -51,7 +61,7 @@ export default function Hero() {
             href={socials.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-[#0A66C2]/60 bg-[#0A66C2]/10 px-4 py-2 text-sm font-semibold text-[#5eaeff] transition-colors hover:border-[#0A66C2] hover:bg-[#0A66C2]/20"
+            className="flex items-center gap-2 rounded-xl border border-[#0A66C2]/60 bg-[#0A66C2]/10 px-4 py-2 text-sm font-semibold text-[#5eaeff] transition-all duration-200 hover:border-[#0A66C2] hover:bg-[#0A66C2]/20 hover:-translate-y-0.5"
           >
             <FaLinkedin className="text-[#0A66C2] text-base" />
             LinkedIn
@@ -61,7 +71,7 @@ export default function Hero() {
             href={socials.github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold transition-colors hover:border-white/40 hover:bg-white/10"
+            className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold transition-all duration-200 hover:border-white/40 hover:bg-white/10 hover:-translate-y-0.5"
           >
             <FaGithub className="text-white text-base" />
             GitHub
@@ -71,16 +81,16 @@ export default function Hero() {
             href={socials.discord}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-[#5865F2]/60 bg-[#5865F2]/10 px-4 py-2 text-sm font-semibold text-[#a5b4fc] transition-colors hover:border-[#5865F2] hover:bg-[#5865F2]/20"
+            className="flex items-center gap-2 rounded-xl border border-[#5865F2]/60 bg-[#5865F2]/10 px-4 py-2 text-sm font-semibold text-[#a5b4fc] transition-all duration-200 hover:border-[#5865F2] hover:bg-[#5865F2]/20 hover:-translate-y-0.5"
           >
             <FaDiscord className="text-[#5865F2] text-base" />
             Discord
           </a>
         </div>
-      </div>
+      </FadeIn>
 
       {/* SKILLS TAGS (FULL WIDTH BELOW BOTH) */}
-      <div className="order-3 md:col-span-2 mt-6 flex flex-wrap gap-2 text-xs text-zinc-400">
+      <FadeIn className="order-3 md:col-span-2 mt-6 flex flex-wrap gap-2 text-xs text-zinc-400" delay={300}>
         {[
           { name: "C++",                url: "https://cplusplus.com/" },
           { name: "Python",             url: "https://www.python.org/" },
@@ -124,7 +134,7 @@ export default function Hero() {
             {name}
           </a>
         ))}
-      </div>
+      </FadeIn>
     </section>
   );
 }
