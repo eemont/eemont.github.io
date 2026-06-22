@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { FaGithub, FaLinkedin, FaDiscord, FaEnvelope } from "react-icons/fa";
 import { X, Loader2, CheckCircle, AlertCircle } from "lucide-react";
@@ -9,10 +9,38 @@ const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+const COOLDOWN_SECONDS = 30;
+const LS_KEY = "contact_last_submit";
+
+function secondsRemaining() {
+  const last = parseInt(localStorage.getItem(LS_KEY) || "0", 10);
+  return Math.max(0, COOLDOWN_SECONDS - Math.floor((Date.now() - last) / 1000));
+}
+
 export default function Contact() {
   const [formOpen, setFormOpen] = useState(false);
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [cooldown, setCooldown] = useState(0);
   const formRef = useRef(null);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    if (formOpen) setCooldown(secondsRemaining());
+  }, [formOpen]);
+
+  useEffect(() => {
+    if (cooldown <= 0) {
+      clearInterval(timerRef.current);
+      return;
+    }
+    timerRef.current = setInterval(() => {
+      setCooldown((s) => {
+        if (s <= 1) { clearInterval(timerRef.current); return 0; }
+        return s - 1;
+      });
+    }, 1000);
+    return () => clearInterval(timerRef.current);
+  }, [cooldown]);
 
   function closeModal() {
     setFormOpen(false);
@@ -21,6 +49,7 @@ export default function Contact() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (cooldown > 0) return;
     setStatus("sending");
     try {
       await emailjs.sendForm(
@@ -29,12 +58,16 @@ export default function Contact() {
         formRef.current,
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
+      localStorage.setItem(LS_KEY, Date.now().toString());
+      setCooldown(COOLDOWN_SECONDS);
       setStatus("success");
       formRef.current.reset();
     } catch {
       setStatus("error");
     }
   }
+
+  const isBlocked = cooldown > 0 || status === "sending";
 
   return (
     <section id="contact" className="mx-auto max-w-5xl px-4 py-16">
@@ -168,11 +201,15 @@ export default function Contact() {
                   )}
 
                   <button
-                    disabled={status === "sending"}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:opacity-90 active:opacity-80 rounded-lg transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
+                    disabled={isBlocked}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:opacity-90 active:opacity-80 rounded-lg transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === "sending" && <Loader2 className="w-4 h-4 animate-spin" />}
-                    {status === "sending" ? "Sending…" : "Send message"}
+                    {status === "sending"
+                      ? "Sending…"
+                      : cooldown > 0
+                      ? `Wait ${cooldown}s before resending`
+                      : "Send message"}
                   </button>
                 </form>
               )}
