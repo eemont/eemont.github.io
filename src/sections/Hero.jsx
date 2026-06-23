@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import { GitHubIcon, LinkedInIcon, DiscordIcon } from "../components/BrandIcons";
 import { socials } from "../data/socials";
 import FadeIn from "../components/FadeIn";
 
@@ -15,18 +15,21 @@ export default function Hero() {
       </div>
 
       {/* IMAGE (TOP ON MOBILE, RIGHT ON DESKTOP) */}
-      <FadeIn className="order-1 flex justify-center md:order-2 md:justify-end" delay={150}>
+      <div className="order-1 flex justify-center md:order-2 md:justify-end">
         <div className="relative">
           <div className="absolute inset-0 scale-110 rounded-full bg-sky-500/15 blur-2xl" />
           <div className="relative h-72 w-72 overflow-hidden rounded-full border-2 border-white/20 ring-2 ring-sky-500/20 sm:h-80 sm:w-80">
             <img
               src="/IMG_0428.JPG"
               alt="Emmanuel Montoya Aguilar"
+              fetchPriority="high"
+              width={320}
+              height={320}
               className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>
-      </FadeIn>
+      </div>
 
       {/* TEXT (BOTTOM ON MOBILE, LEFT ON DESKTOP) */}
       <FadeIn className="order-2 md:order-1">
@@ -63,7 +66,7 @@ export default function Hero() {
             rel="noreferrer"
             className="flex items-center gap-2 rounded-xl border border-[#0A66C2]/60 bg-[#0A66C2]/10 px-4 py-2 text-sm font-semibold text-[#5eaeff] transition-all duration-200 hover:border-[#0A66C2] hover:bg-[#0A66C2]/20 hover:-translate-y-0.5"
           >
-            <FaLinkedin className="text-[#0A66C2] text-base" />
+            <LinkedInIcon className="text-[#0A66C2] text-base w-[1em] h-[1em]" />
             LinkedIn
           </a>
 
@@ -73,7 +76,7 @@ export default function Hero() {
             rel="noreferrer"
             className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold transition-all duration-200 hover:border-white/40 hover:bg-white/10 hover:-translate-y-0.5"
           >
-            <FaGithub className="text-white text-base" />
+            <GitHubIcon className="text-white text-base w-[1em] h-[1em]" />
             GitHub
           </a>
 
@@ -83,7 +86,7 @@ export default function Hero() {
             rel="noreferrer"
             className="flex items-center gap-2 rounded-xl border border-[#5865F2]/60 bg-[#5865F2]/10 px-4 py-2 text-sm font-semibold text-[#a5b4fc] transition-all duration-200 hover:border-[#5865F2] hover:bg-[#5865F2]/20 hover:-translate-y-0.5"
           >
-            <FaDiscord className="text-[#5865F2] text-base" />
+            <DiscordIcon className="text-[#5865F2] text-base w-[1em] h-[1em]" />
             Discord
           </a>
         </div>

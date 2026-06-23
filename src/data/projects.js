@@ -16,7 +16,7 @@ export const projects = [
       live: "https://pc-bg.vercel.app/",
       code: "https://github.com/eemont/PC-Build-Generator",
     },
-    image: "/projects/PCBG_LOGO.png",
+    image: "/projects/PCBG_LOGO.webp",
   },
   {
     title: "LEXER",
@@ -35,7 +35,7 @@ export const projects = [
       live: "https://eemont.github.io/cpsc323-project1/",
       code: "https://github.com/eemont/cpsc323-project1",
     },
-    image: "/projects/LexicalAnalyzerPNG.png",
+    image: "/projects/LexicalAnalyzerPNG.webp",
   },
   {
     title: "Planify",
@@ -54,7 +54,7 @@ export const projects = [
       live: "",
       code: "https://github.com/eemont/Planify",
     },
-    image: "/projects/planify_appicon.png",
+    image: "/projects/planify_appicon.webp",
   },
   {
     title: "FlexFit",
@@ -73,6 +73,6 @@ export const projects = [
       live: "",
       code: "https://github.com/jainharshul/FlexFit",
     },
-    image: "/projects/flexfit_appicon.png",
+    image: "/projects/flexfit_appicon.webp",
   },
 ];

@@ -189,7 +189,7 @@ export default function Logos() {
 
       {selected && (
         <div
-          className="animate-fade-in fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-6"
+          className="animate-fade-in fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-6"
           onClick={() => setSelected(null)}
         >
           <div

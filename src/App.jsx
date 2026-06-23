@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
-import Skills from "./sections/Skills";
-import Logos from "./sections/Logos";
-import Contact from "./sections/Contact";
+
+const Skills = lazy(() => import("./sections/Skills"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Logos = lazy(() => import("./sections/Logos"));
+const Contact = lazy(() => import("./sections/Contact"));
 
 export default function App() {
   return (
@@ -12,10 +14,12 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Skills />
-        <Projects />
-        <Logos />
-        <Contact />
+        <Suspense>
+          <Skills />
+          <Projects />
+          <Logos />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </div>

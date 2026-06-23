@@ -72,7 +72,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-5xl px-4 py-16">
       <FadeIn>
-        <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 transition-all duration-300 hover:border-white/20">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-white/20">
           <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
           <p className="mt-2 text-zinc-300">
             Reach out — I'd love to connect and collaborate on interesting projects!
@@ -123,7 +123,7 @@ export default function Contact() {
       {formOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/80"
             onClick={closeModal}
           />
           <div className="relative z-10 w-full max-w-lg">

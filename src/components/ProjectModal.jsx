@@ -14,7 +14,7 @@ export default function ProjectModal({ project, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center p-0 bg-black/70 backdrop-blur-sm sm:items-center sm:p-4 animate-fade-in"
+      className="fixed inset-0 z-50 flex items-end justify-center p-0 bg-black/80 sm:items-center sm:p-4 animate-fade-in"
       onClick={onClose}
     >
       <div

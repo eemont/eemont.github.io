@@ -41,7 +41,7 @@ export default function Navbar() {
           className="flex items-center gap-6 font-semibold tracking-tight"
         >
           <img
-            src="/projects/EMlogoWHITE.png"
+            src="/projects/EMlogoWHITE.webp"
             alt="Logo"
             className="h-8 w-8 rounded-md transition-opacity duration-200 hover:opacity-80"
           />
