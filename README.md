@@ -1,5 +1,5 @@
 # Emmanuel Montoya's Website
 ## How to Run:
-https://eemont.github.io
+https://www.emont.dev
 
 Click Here ^
