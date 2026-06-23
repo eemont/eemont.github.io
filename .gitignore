@@ -14,6 +14,13 @@ dist-ssr
 
 .env
 
+# Lighthouse reports
+*.report.html
+*.report.json
+
+# One-off scripts
+scripts/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
