@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { GitHubIcon, LinkedInIcon, DiscordIcon } from "../components/BrandIcons";
 import { socials } from "../data/socials";
 import FadeIn from "../components/FadeIn";
+import ResumeModal from "../components/ResumeModal";
 
 export default function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
+
   return (
     <section
       id="top"
@@ -53,12 +57,12 @@ export default function Hero() {
             View projects
           </a>
 
-          <a
-            href="https://docs.google.com/document/d/18BPKCWXhiGvv7LqWIu_jk13Zie6PvaGT0QFumCX5Jbc/export?format=pdf"
+          <button
+            onClick={() => setResumeOpen(true)}
             className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold transition-all duration-200 hover:border-white/20 hover:bg-white/5 hover:-translate-y-0.5"
           >
-            Download resume
-          </a>
+            View resume
+          </button>
 
           <a
             href={socials.linkedin}
@@ -92,6 +96,7 @@ export default function Hero() {
         </div>
       </FadeIn>
 
+      {resumeOpen && <ResumeModal onClose={() => setResumeOpen(false)} />}
     </section>
   );
 }
