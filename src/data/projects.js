@@ -18,6 +18,26 @@ export const projects = [
     },
     image: "/projects/PCBG_LOGO.webp",
   },
+    {
+  title: "YapSessions",
+  description:
+    "A real-time chat application that lets users communicate instantly through WebSocket-powered messaging, with secure authentication and persistent message history.",
+  details:
+    "A full-stack real-time chat platform built with Node.js and Express, using Socket.io for instant bidirectional messaging between connected users. Authentication is handled via Passport with bcrypt-hashed passwords and rate-limited login attempts to prevent brute-force attacks. User accounts and message history are persisted in a PostgreSQL database hosted on Neon, with the backend deployed on Render.",
+  features: [
+    "Real-time messaging powered by Socket.io and WebSockets",
+    "Secure authentication with Passport, bcrypt password hashing, and account lockout protection",
+    "Persistent chat history stored in a PostgreSQL (Neon) database",
+    "File upload and emoji support within the chat interface",
+    "Rate limiting to guard against brute-force login attempts",
+  ],
+  tags: ["Node.js", "Express", "Socket.io", "PostgreSQL", "Neon", "Passport", "Render"],
+  links: {
+    live: "https://yap-sessions.onrender.com",
+    code: "https://github.com/eemont/Web-Socket-Communication",
+  },
+  image: "/projects/YapSessions_appicon.png",
+},
   {
     title: "LEXER",
     description:
@@ -54,25 +74,25 @@ export const projects = [
       live: "https://planify-firebase-72706.web.app/",
       code: "https://github.com/eemont/Planify",
     },
-    image: "/projects/planify_appicon.webp",
+    image: "/projects/planify_appicon.png",
   },
-  {
-    title: "FlexFit",
-    description:
-      "An application that allows users to figure out their BMR and BMI while at the same time saving it into their personal profile. Not only that but also allowing users to discover exercises needed to work out the muscle they desire.",
-    details:
-      "A native iOS fitness companion built with SwiftUI. Users enter their stats to calculate BMR (Basal Metabolic Rate) and BMI, which are saved to their profile for progress tracking over time. The app also includes a muscle-targeted exercise browser so users can find the right exercises for the muscle group they want to train.",
-    features: [
-      "BMR and BMI calculator with personal profile storage",
-      "Historical metric tracking across sessions",
-      "Muscle-targeted exercise discovery browser",
-      "Native iOS design built with SwiftUI",
-    ],
-    tags: ["XCode", "SwiftUI", "iOS", "Figma"],
-    links: {
-      live: "",
-      code: "https://github.com/jainharshul/FlexFit",
-    },
-    image: "/projects/flexfit_appicon.webp",
-  },
+  // {
+  //   title: "FlexFit",
+  //   description:
+  //     "An application that allows users to figure out their BMR and BMI while at the same time saving it into their personal profile. Not only that but also allowing users to discover exercises needed to work out the muscle they desire.",
+  //   details:
+  //     "A native iOS fitness companion built with SwiftUI. Users enter their stats to calculate BMR (Basal Metabolic Rate) and BMI, which are saved to their profile for progress tracking over time. The app also includes a muscle-targeted exercise browser so users can find the right exercises for the muscle group they want to train.",
+  //   features: [
+  //     "BMR and BMI calculator with personal profile storage",
+  //     "Historical metric tracking across sessions",
+  //     "Muscle-targeted exercise discovery browser",
+  //     "Native iOS design built with SwiftUI",
+  //   ],
+  //   tags: ["XCode", "SwiftUI", "iOS", "Figma"],
+  //   links: {
+  //     live: "",
+  //     code: "https://github.com/jainharshul/FlexFit",
+  //   },
+  //   image: "/projects/flexfit_appicon.png",
+  // },
 ];
