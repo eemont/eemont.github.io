@@ -51,7 +51,7 @@ export const projects = [
     ],
     tags: ["Flutter", "Firebase", "Dart", "XCode", "Android Studio", "Figma"],
     links: {
-      live: "",
+      live: "https://planify-firebase-72706.web.app/",
       code: "https://github.com/eemont/Planify",
     },
     image: "/projects/planify_appicon.webp",
