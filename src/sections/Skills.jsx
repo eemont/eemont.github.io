@@ -38,8 +38,8 @@ export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl px-4 py-16">
       <FadeIn>
-        <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
-        <p className="mt-2 text-zinc-300">
+        <h2 className="section-title">Skills</h2>
+        <p className="mt-4 text-zinc-300">
           Technologies and tools I've worked with.
         </p>
       </FadeIn>
@@ -52,7 +52,7 @@ export default function Skills() {
               href={url}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-white/10 px-3 py-1 transition-all duration-200 hover:border-white/30 hover:bg-white/10 hover:text-zinc-100 hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(255,255,255,0.06)]"
+              className="rounded-full border border-white/10 px-3 py-1 transition-all duration-200 hover:border-brand-500/70 hover:bg-brand-500/15 hover:text-white hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(255,255,255,0.06)]"
             >
               {name}
             </a>

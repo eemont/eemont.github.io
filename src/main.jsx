@@ -5,6 +5,7 @@ import "@fontsource/open-sauce-one/400.css";
 import "@fontsource/open-sauce-one/500.css";
 import "@fontsource/open-sauce-one/600.css";
 import "@fontsource/open-sauce-one/700.css";
+import "@fontsource-variable/league-spartan";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

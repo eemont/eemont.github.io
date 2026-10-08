@@ -1,57 +1,57 @@
-export default function ProjectCard({ title, description, tags, links, image, onClick }) {
+const MAX_TAGS = 3;
+
+export default function ProjectCard({ title, tags, links, image, onClick }) {
+  const shownTags = tags?.slice(0, MAX_TAGS) ?? [];
+  const extraTags = (tags?.length ?? 0) - shownTags.length;
+
   return (
     <article
-      className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-white/20 hover:shadow-xl hover:shadow-black/50 cursor-pointer"
+      className="group flex h-full items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-xl hover:shadow-black/50 cursor-pointer"
       onClick={onClick}
     >
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-white/5">
+      <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white/5">
         {image ? (
           <img
             src={image}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
+            decoding="async"
           />
         ) : null}
-
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
       </div>
 
-      <div className="p-5">
-        <h3 className="text-lg font-semibold transition-colors duration-200 group-hover:text-white">{title}</h3>
-        <p className="mt-2 text-sm text-zinc-300 line-clamp-3">{description}</p>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags?.map((t) => (
+      <div className="flex min-w-0 flex-1 flex-col self-stretch">
+        <h3 className="font-semibold transition-colors duration-200 group-hover:text-brand-300">{title}</h3>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {shownTags.map((t) => (
             <span
               key={t}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300"
+              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-zinc-300"
             >
               {t}
             </span>
           ))}
+          {extraTags > 0 && (
+            <span className="rounded-full px-1.5 py-0.5 text-xs text-zinc-500">+{extraTags}</span>
+          )}
         </div>
 
-        <div className="mt-5 flex gap-3 text-sm">
+        <div className="mt-auto flex items-center gap-2 pt-3 text-xs">
           {links?.live && (
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            <a
+              href={links.live}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 rounded-lg bg-brand-500 px-3 py-1 font-medium text-white transition-colors duration-200 hover:bg-brand-400"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300 opacity-75"></span>
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-400"></span>
               </span>
-
-              <a
-                href={links.live}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-lg bg-white text-black px-4 py-1.5 font-medium transition-all duration-200 hover:bg-zinc-200 hover:shadow-md hover:shadow-white/10"
-                onClick={(e) => e.stopPropagation()}
-              >
-                Live
-              </a>
-            </div>
+              Demo
+            </a>
           )}
 
           {links?.code && (
@@ -59,7 +59,7 @@ export default function ProjectCard({ title, description, tags, links, image, on
               href={links.code}
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg border border-white/20 px-4 py-1.5 font-medium text-white transition-all duration-200 hover:bg-white/10 hover:border-white/40"
+              className="rounded-lg border border-white/20 px-3 py-1 font-medium text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10"
               onClick={(e) => e.stopPropagation()}
             >
               Code

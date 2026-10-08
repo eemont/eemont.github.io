@@ -10,15 +10,15 @@ export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-4 py-16">
       <FadeIn>
-        <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
-        <p className="mt-2 text-zinc-300">
+        <h2 className="section-title">Projects</h2>
+        <p className="mt-4 text-zinc-300">
           Here's a few things I've built. Click a card for more details.
         </p>
       </FadeIn>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
+      <div className="mt-8 grid gap-3 sm:grid-cols-2">
         {projects.map((p, i) => (
-          <FadeIn key={p.title} delay={i * 100}>
+          <FadeIn key={p.title} delay={i * 100} className="h-full">
             <ProjectCard {...p} onClick={() => setSelected(p)} />
           </FadeIn>
         ))}

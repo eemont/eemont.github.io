@@ -1,16 +1,18 @@
 import { useState } from "react";
 import ResumeModal from "./ResumeModal";
+import ScrollProgress from "./ScrollProgress";
 
 const links = [
   { label: "Home",     href: "#top" },
   { label: "Skills",   href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Websites", href: "#websites" },
   { label: "Logos",    href: "#logos" },
   { label: "Contact",  href: "#contact" },
 ];
 
 const linkClass =
-  "relative hover:text-white transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full";
+  "relative hover:text-white transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-brand-500 after:transition-all after:duration-300 hover:after:w-full";
 
 function scrollTo(href) {
   if (href === "#top") {
@@ -32,7 +34,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
           {/* Logo */}
           <a
@@ -43,7 +45,7 @@ export default function Navbar() {
             <img
               src="/projects/EMlogoWHITE.webp"
               alt="Logo"
-              className="h-8 w-8 rounded-md transition-opacity duration-200 hover:opacity-80"
+              className="h-11 w-11 rounded-md transition-opacity duration-200 hover:opacity-80"
             />
           </a>
 
@@ -60,7 +62,7 @@ export default function Navbar() {
               </a>
             ))}
             <button
-              className="rounded-lg border border-white/10 px-3 py-1.5 transition-all duration-200 hover:border-white/20 hover:bg-white/5 hover:text-white"
+              className="rounded-lg border border-brand-500/60 px-3 py-1.5 text-white transition-all duration-200 hover:border-brand-500 hover:bg-brand-500"
               onClick={() => setResumeOpen(true)}
             >
               Resume
@@ -86,7 +88,7 @@ export default function Navbar() {
               <a
                 key={label}
                 href={href}
-                className="rounded-lg px-3 py-2 hover:bg-white/5 hover:text-white transition-colors duration-200"
+                className="rounded-lg px-3 py-2 hover:bg-brand-500/10 hover:text-white transition-colors duration-200"
                 onClick={(e) => handleClick(e, href)}
               >
                 {label}
@@ -100,6 +102,8 @@ export default function Navbar() {
             </button>
           </nav>
         </div>
+
+        <ScrollProgress />
       </header>
 
       {resumeOpen && <ResumeModal onClose={() => setResumeOpen(false)} />}

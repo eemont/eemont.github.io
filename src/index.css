@@ -4,7 +4,7 @@
 
 @layer base {
   html, body {
-    background-color: #09090b;
+    background-color: #1a1a1a;
     scroll-behavior: smooth;
   }
 
@@ -13,7 +13,24 @@
   }
 }
 
+@layer components {
+  /* Bold uppercase heading with a blue rule underneath, like the banner */
+  .section-title {
+    @apply font-display text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl;
+  }
+  .section-title::after {
+    content: "";
+    @apply mt-2 block h-[3px] w-14 rounded-full bg-brand-500;
+  }
+}
+
 @layer utilities {
+  /* Static dot grid - scrolls with the page, no repaint cost */
+  .bg-dots {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
   .animate-fade-in {
     animation: fade-in 0.2s ease-out forwards;
   }

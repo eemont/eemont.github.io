@@ -26,7 +26,7 @@ export default function ResumeModal({ onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0">
-          <h2 className="text-lg font-semibold tracking-tight bg-gradient-to-r from-sky-200 via-white to-violet-200 bg-clip-text text-transparent">
+          <h2 className="font-display text-xl font-bold uppercase tracking-wide text-white">
             Resume
           </h2>
           <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ export default function ResumeModal({ onClose }) {
               href={downloadUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-xl bg-white px-4 py-1.5 text-sm font-semibold text-zinc-950 transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10"
+              className="flex items-center gap-2 rounded-xl bg-brand-500 px-4 py-1.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-brand-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-500/30"
             >
               <FaDownload className="text-xs" />
               Download PDF
