@@ -36,7 +36,7 @@ export const projects = [
     live: "https://yap-sessions.onrender.com",
     code: "https://github.com/eemont/Web-Socket-Communication",
   },
-  image: "/projects/YapSessions_appicon.png",
+  image: "/projects/YapSessions_appicon.webp",
 },
   {
     title: "LEXER",
@@ -69,12 +69,12 @@ export const projects = [
       "Real-time sync powered by Firebase",
       "Cross-platform support for iOS and Android via Flutter",
     ],
-    tags: ["Flutter", "Firebase", "Dart", "XCode", "Android Studio", "Figma"],
+    tags: ["Flutter", "Firebase", "Dart", "Android Studio", "Figma"],
     links: {
       live: "https://planify-firebase-72706.web.app/",
       code: "https://github.com/eemont/Planify",
     },
-    image: "/projects/planify_appicon.png",
+    image: "/projects/planify_appicon.webp",
   },
   // {
   //   title: "FlexFit",

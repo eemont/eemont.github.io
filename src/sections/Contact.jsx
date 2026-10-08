@@ -73,17 +73,17 @@ export default function Contact() {
     <section id="contact" className="mx-auto max-w-5xl px-4 py-16">
       <FadeIn>
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-white/20">
-          <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
-          <p className="mt-2 text-zinc-300">
+          <h2 className="section-title">Contact</h2>
+          <p className="mt-4 text-zinc-300">
             Reach out — I'd love to connect and collaborate on interesting projects!
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
             <button
               onClick={() => setFormOpen(true)}
-              className="flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10"
+              className="flex items-center gap-2 rounded-xl bg-brand-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-brand-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-500/30"
             >
-              <FaEnvelope className="text-zinc-700 text-base" />
+              <FaEnvelope className="text-base" />
               Email me
             </button>
 
@@ -107,7 +107,7 @@ export default function Contact() {
               GitHub
             </a>
 
-            <a
+            {/* <a
               className="flex items-center gap-2 rounded-xl border border-[#5865F2]/60 bg-[#5865F2]/10 px-4 py-2 text-sm font-semibold text-[#a5b4fc] transition-all duration-200 hover:border-[#5865F2] hover:bg-[#5865F2]/20 hover:-translate-y-0.5"
               href={socials.discord}
               target="_blank"
@@ -115,7 +115,7 @@ export default function Contact() {
             >
               <FaDiscord className="text-[#5865F2] text-base" />
               Discord
-            </a>
+            </a> */}
           </div>
         </div>
       </FadeIn>
@@ -134,9 +134,9 @@ export default function Contact() {
               <X className="w-4 h-4" />
             </button>
 
-            <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-white/10 p-8">
-              <h3 className="text-cyan-400 font-semibold text-sm">Contact</h3>
-              <p className="text-white text-2xl font-semibold mt-1">Get in touch</p>
+            <div className="relative overflow-hidden rounded-2xl bg-ink-950 border border-white/10 p-8">
+              <h3 className="text-brand-400 font-semibold text-sm uppercase tracking-widest">Contact</h3>
+              <p className="font-display text-white text-3xl font-bold uppercase mt-1">Get in touch</p>
               <p className="text-gray-400 text-sm mt-1 mb-6">
                 Fill out the form and I'll get back to you soon.
               </p>
@@ -148,7 +148,7 @@ export default function Contact() {
                   <p className="text-zinc-400 text-sm">I'll get back to you as soon as possible.</p>
                   <button
                     onClick={closeModal}
-                    className="mt-2 px-5 py-2 text-sm font-semibold text-zinc-950 bg-white hover:opacity-90 rounded-lg transition-opacity"
+                    className="mt-2 px-5 py-2 text-sm font-semibold text-white bg-brand-500 hover:bg-brand-400 rounded-lg transition-colors"
                   >
                     Close
                   </button>
@@ -162,7 +162,7 @@ export default function Contact() {
                       name="name"
                       type="text"
                       required
-                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-cyan-500/60 rounded-lg text-sm transition-colors"
+                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-brand-500 rounded-lg text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -171,7 +171,7 @@ export default function Contact() {
                       name="email"
                       type="email"
                       required
-                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-cyan-500/60 rounded-lg text-sm transition-colors"
+                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-brand-500 rounded-lg text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -181,15 +181,41 @@ export default function Contact() {
                     <input
                       name="phone"
                       type="tel"
-                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-cyan-500/60 rounded-lg text-sm transition-colors"
+                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-brand-500 rounded-lg text-sm transition-colors"
                     />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-zinc-300">
+                      Service <span className="text-zinc-500 font-normal">(optional)</span>
+                    </label>
+                    <select
+                      name="service"
+                      defaultValue=""
+                      className="w-full mt-1.5 px-3 py-2 text-zinc-200 bg-zinc-800 border border-white/10 outline-none focus:border-brand-500 rounded-lg text-sm transition-colors appearance-none cursor-pointer"
+                    >
+                      <option value="" disabled className="text-zinc-500">Select a service…</option>
+                      <optgroup label="One-time projects">
+                        <option value="VoIP / PBX System Setup">VoIP / PBX System Setup</option>
+                        <option value="Network & Office IT Setup">Network &amp; Office IT Setup</option>
+                        <option value="Website / Landing Page">Website / Landing Page</option>
+                        <option value="Logo Design">Logo Design</option>
+                        <option value="Internal Tool Development">Internal Tool Development</option>
+                      </optgroup>
+                      <optgroup label="Monthly retainers">
+                        <option value="Managed IT Support">Managed IT Support</option>
+                        <option value="VoIP System Maintenance">VoIP System Maintenance</option>
+                        <option value="Website Care Plan">Website Care Plan</option>
+                        <option value="Remote IT Helpdesk">Remote IT Helpdesk</option>
+                      </optgroup>
+                      <option value="General inquiry / not sure yet">General inquiry / not sure yet</option>
+                    </select>
                   </div>
                   <div>
                     <label className="text-sm font-medium text-zinc-300">Message</label>
                     <textarea
                       name="message"
                       required
-                      className="w-full mt-1.5 h-28 px-3 py-2 resize-none text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-cyan-500/60 rounded-lg text-sm transition-colors"
+                      className="w-full mt-1.5 h-28 px-3 py-2 resize-none text-zinc-200 bg-white/5 border border-white/10 outline-none focus:border-brand-500 rounded-lg text-sm transition-colors"
                     />
                   </div>
 
@@ -202,7 +228,7 @@ export default function Contact() {
 
                   <button
                     disabled={isBlocked}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:opacity-90 active:opacity-80 rounded-lg transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-brand-500 hover:bg-brand-400 active:bg-brand-600 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === "sending" && <Loader2 className="w-4 h-4 animate-spin" />}
                     {status === "sending"

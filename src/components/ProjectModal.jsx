@@ -45,7 +45,7 @@ export default function ProjectModal({ project, onClose }) {
         {/* Content */}
         <div className="p-6">
           {/* Title + tags */}
-          <h2 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-sky-200 via-white to-violet-200 bg-clip-text text-transparent">
+          <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white">
             {project.title}
           </h2>
 
@@ -76,7 +76,7 @@ export default function ProjectModal({ project, onClose }) {
               <ul className="mt-3 space-y-2">
                 {project.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-zinc-300">
-                    <FaCheckCircle className="mt-0.5 shrink-0 text-sky-400 text-base" />
+                    <FaCheckCircle className="mt-0.5 shrink-0 text-brand-400 text-base" />
                     {f}
                   </li>
                 ))}
@@ -91,10 +91,10 @@ export default function ProjectModal({ project, onClose }) {
                 href={project.links.live}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-zinc-950 transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10"
+                className="flex items-center gap-2 rounded-xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-brand-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-500/30"
               >
                 <FaExternalLinkAlt className="text-xs" />
-                Live demo
+                Demo
               </a>
             )}
             {project.links?.code && (
